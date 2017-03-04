@@ -1,17 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indra.Sofia2.SSAP.KP", "Indra.Sofia2.SSAP.KP\Indra.Sofia2.SSAP.KP.csproj", "{73A298AB-C3EB-4C68-9BA1-87CE6C7F9939}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indra.Sofia2.SSAP.CommandMessages", "Indra.Sofia2.SSAP.CommandMessages\Indra.Sofia2.SSAP.CommandMessages.csproj", "{AE110A64-648E-43BA-B420-89D322DD4CCF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indra.Sofia2.SSAP.SSAP", "Indra.Sofia2.SSAP.SSAP\Indra.Sofia2.SSAP.SSAP.csproj", "{A9619259-41E4-484E-8442-F6578B61B150}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UnitTests", "UnitTests", "{DC16150F-6DB1-4D22-A0AC-A8AF484418F4}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indra.Sofia2.SSAP_UTests", "Indra.Sofia2.SSAP_UTests\Indra.Sofia2.SSAP_UTests.csproj", "{2D0162C6-9160-4F25-8EB7-A628832A3343}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Indra.Sofia2.SSAP.Common", "Indra.Sofia2.SSAP.Common\Indra.Sofia2.SSAP.Common.csproj", "{835E006D-3A51-4684-81DA-22944EBE8D9E}"
 EndProject
@@ -27,18 +23,10 @@ Global
 		{73A298AB-C3EB-4C68-9BA1-87CE6C7F9939}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{73A298AB-C3EB-4C68-9BA1-87CE6C7F9939}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{73A298AB-C3EB-4C68-9BA1-87CE6C7F9939}.Release|Any CPU.Build.0 = Release|Any CPU
-		{AE110A64-648E-43BA-B420-89D322DD4CCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{AE110A64-648E-43BA-B420-89D322DD4CCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{AE110A64-648E-43BA-B420-89D322DD4CCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{AE110A64-648E-43BA-B420-89D322DD4CCF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A9619259-41E4-484E-8442-F6578B61B150}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A9619259-41E4-484E-8442-F6578B61B150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9619259-41E4-484E-8442-F6578B61B150}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9619259-41E4-484E-8442-F6578B61B150}.Release|Any CPU.Build.0 = Release|Any CPU
-		{2D0162C6-9160-4F25-8EB7-A628832A3343}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2D0162C6-9160-4F25-8EB7-A628832A3343}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2D0162C6-9160-4F25-8EB7-A628832A3343}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2D0162C6-9160-4F25-8EB7-A628832A3343}.Release|Any CPU.Build.0 = Release|Any CPU
 		{835E006D-3A51-4684-81DA-22944EBE8D9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{835E006D-3A51-4684-81DA-22944EBE8D9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{835E006D-3A51-4684-81DA-22944EBE8D9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -52,7 +40,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
-		{2D0162C6-9160-4F25-8EB7-A628832A3343} = {DC16150F-6DB1-4D22-A0AC-A8AF484418F4}
 		{DEB685AA-DBB2-49B1-A52F-2414B993742A} = {DC16150F-6DB1-4D22-A0AC-A8AF484418F4}
 	EndGlobalSection
 EndGlobal

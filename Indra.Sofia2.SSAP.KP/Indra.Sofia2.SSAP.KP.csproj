@@ -67,7 +67,6 @@
     <Compile Include="Exceptions\SQLSentenceNotAllowedForThisOperationException.cs" />
     <Compile Include="Exceptions\SSAPResponseTimeoutException.cs" />
     <Compile Include="IKpSSAP.cs" />
-    <Compile Include="IListener4SIBCommandMessageNotifications.cs" />
     <Compile Include="IListener4SIBIndicationNotifications.cs" />
     <Compile Include="IKp.cs" />
     <Compile Include="Implementations\Listener\IKPConnectorEventListener.cs" />
@@ -83,21 +82,12 @@
     <Compile Include="Implementations\Rest\Response\LeaveResponse.cs" />
     <Compile Include="Implementations\Rest\Response\QueryResponse.cs" />
     <Compile Include="Implementations\Rest\Response\UpdateResponse.cs" />
-    <Compile Include="Implementations\TcpIp\Core\ClientConnectionAttachment.cs" />
-    <Compile Include="Implementations\TcpIp\Core\ClientMessage.cs" />
-    <Compile Include="Implementations\TcpIp\Core\MessageParseException.cs" />
-    <Compile Include="Implementations\TcpIp\Core\SSAPMessageParser.cs" />
-    <Compile Include="Implementations\TcpIp\Core\TcpIpConfiguration.cs" />
     <Compile Include="Implementations\WebSocket\KpWebSocketClient.cs" />
     <Compile Include="Implementations\WebSocket\WebSocketConnectionConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SSAPMessageGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Indra.Sofia2.SSAP.CommandMessages\Indra.Sofia2.SSAP.CommandMessages.csproj">
-      <Project>{ae110a64-648e-43ba-b420-89d322dd4ccf}</Project>
-      <Name>Indra.Sofia2.SSAP.CommandMessages</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Indra.Sofia2.SSAP.Common\Indra.Sofia2.SSAP.Common.csproj">
       <Project>{835e006d-3a51-4684-81da-22944ebe8d9e}</Project>
       <Name>Indra.Sofia2.SSAP.Common</Name>
