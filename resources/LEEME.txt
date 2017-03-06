@@ -1,0 +1,27 @@
+*********************************************
+API Net - Sofia2
+*********************************************
+Utilización del API:
+ 1) Agregar como referencia el ensamblado System.Net.Http.Formatting (de .Net), ya que es una dependencia del API
+ 2) Agregar como referencias en el proyecto que vaya a usar la librería los ensamblados contenidos en la carpeta lib/
+ 
+
+
+Estructura del API:
+	lib/: Libreria principal del API, incorpora las utilidades para el desarrollo de KPs
+	lib/dependencias: Dependencias externas del API
+	
+
+Para empezar a trabajar con el API, se puede partir del proyecto de prueba proporcionado:
+Proyecto de Prueba:
+	Indra.Sofia2.SSAP.KP_UTest: Proyecto para Visual Studio 2013 con una serie de tests listos para ser lanzados:
+		* KpGatewayRestFuncional.cs: Test del API funcionando con el Gateway RESTFul de Sofia2
+				
+Sustituir en estos test las constantes:
+	private static String TOKEN = "38d45160fa2445cfba138f9d4ab1064c";	
+	private static String KP_INSTANCE = "ONTOLOGIA_TEST_KP:Portatil";	
+	private static String ONTOLOGY_NAME = "ONTOLOGIA_TEST";
+	
+por el token, instancia de kp y ontologia creados por el usuario en la consola de http://sofia2.com/console
+
+Sustituir también las demás variables estáticas en función de la prueba que se quiera realizar.
