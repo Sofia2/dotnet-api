@@ -34,6 +34,7 @@ namespace Indra.Sofia2.SSAP.SSAP
         SIB_DEFINED, 
         CEP,
         BDH,
-        BDC
+        BDC,
+        SQL
     }
 }

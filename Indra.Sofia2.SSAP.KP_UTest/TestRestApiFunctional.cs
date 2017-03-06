@@ -35,12 +35,26 @@ namespace Indra.Sofia2.SSAP.KP_UTest
     {
         #region Constantes
 
+
+        // Sofia2
+        private static String SERVICE_URL = "http://sofia2.com/sib/services/api_ssap/";
+        private static String TOKEN = "49622ff059364fcea6ce78e8b0fa8b4b";
+        private static String KP = "KP_APITesting";
+        private static String KP_INSTANCE = "KP_APITesting:KPTestTemperatura01";
+
+
+        // localhost
+        //private static String SERVICE_URL = "http://localhost:8080/sib/services/api_ssap/";
+        //private static String TOKEN = "9f7e526e5423436bb9e4ea87afb1573c";
+        //private static String KP = "TestKP";
+        //private static String KP_INSTANCE = "TestKP:KPTestTemperatura01";
+
         //private static String SERVICE_URL = "http://sofia2.com/sib/services/api_ssap/";
-        private static String SERVICE_URL = "http://localhost:8080/sib/services/api_ssap/";
-        private static String TOKEN = "9f7e526e5423436bb9e4ea87afb1573c";
-        private static String KP = "TestKP";
-        private static String KP_INSTANCE = "TestKP:KPTestTemperatura01";
-	
+        //private static String SERVICE_URL = "http://localhost:8080/sib/services/api_ssap/";
+        //private static String TOKEN = "9f7e526e5423436bb9e4ea87afb1573c";
+        //private static String KP = "TestKP";
+        //private static String KP_INSTANCE = "TestKP:KPTestTemperatura01";
+
         private static String ONTOLOGY_NAME = "TestSensorTemperatura";
         private static String ONTOLOGY_INSTANCE = "{\"Sensor\":{\"geometry\":{\"coordinates\":[40.512967,-3.67495],\"type\":\"Point\"},    \"assetId\": \"S_Temperatura_00067\",\"measure\":25,\"timestamp\":{\"$date\":\"2014-04-29T08:24:54.005Z\"}}}";
         private static String ONTOLOGY_BULK_INSTANCE = "{{\"ONTOLOGIA_TEST\":{\"Atributo1\":\"camion\",\"Atributo2\":false}},{\"ONTOLOGIA_TEST\":{\"Atributo1\":\"furgoneta\",\"Atributo2\":false}}, {\"ONTOLOGIA_TEST\":{\"Atributo1\":\"barco\",\"Atributo2\":false}}, {\"ONTOLOGIA_TEST\":{\"Atributo1\":\"avion\",\"Atributo2\":false}}, {\"ONTOLOGIA_TEST\":{\"Atributo1\":\"helicoptero\",\"Atributo2\":false}}}";
@@ -720,7 +734,7 @@ namespace Indra.Sofia2.SSAP.KP_UTest
         }
 
         [TestMethod]
-        //[Ignore()]
+        [Ignore()]
         public void TestSubscribeCommandAndIndication()
         {
             SetUpClass();

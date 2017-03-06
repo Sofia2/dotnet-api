@@ -63,6 +63,7 @@
     <Compile Include="Body\SSAPBodyMessage.cs" />
     <Compile Include="Body\SSAPBodyOperationMessage.cs" />
     <Compile Include="Body\SSAPBodyQueryMessage.cs" />
+    <Compile Include="Body\SSAPBodyQueryMessageQuasar.cs" />
     <Compile Include="Body\SSAPBodyQueryWithParamMessage.cs" />
     <Compile Include="Body\SSAPBodyReturnMessage.cs" />
     <Compile Include="Body\SSAPBodySubscribeCommandMessage.cs" />
@@ -80,6 +81,7 @@
     <Compile Include="SSAPMessage.cs" />
     <Compile Include="SSAPMessageDirectionEnum.cs" />
     <Compile Include="SSAPMessageTypesEnum.cs" />
+    <Compile Include="SSAPQueryResultFormat.cs" />
     <Compile Include="SSAPQueryTypeEnum.cs" />
     <Compile Include="SSAPSeverityLevel.cs" />
   </ItemGroup>

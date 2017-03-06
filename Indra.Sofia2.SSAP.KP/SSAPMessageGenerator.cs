@@ -699,6 +699,27 @@ namespace Indra.Sofia2.SSAP.KP
         }
 
 
+        public SSAPMessage<SSAPBodyQueryMessageQuasar> GenerateQueryMessageQusarSQL(string sessionKey, string query, int offset, SSAPQueryResultFormat resultFormat, string formatter)
+        {
+            var body = new SSAPBodyQueryMessageQuasar
+            {
+                Query = query,
+                QueryType = SSAPQueryTypeEnum.SQL,
+                Formatter = formatter,
+                Offset = offset,
+                ResultFormat = resultFormat,
+            };
+
+            return new SSAPMessage<SSAPBodyQueryMessageQuasar>()
+            {
+                Body = body,
+                Direction = SSAPMessageDirectionEnum.REQUEST,
+                MessageType = SSAPMessageTypesEnum.QUERY,
+                SessionKey = sessionKey
+            };
+        }
+
+
 
         #endregion Public Methods
 

@@ -43,6 +43,7 @@ namespace Indra.Sofia2.SSAP.SSAP.Body
         /// <summary>
         /// Gets or sets thq query params (key-value)
         /// </summary>
+        [JsonProperty(PropertyName = "queryParams")]
         public Dictionary<string, string> QueryParams
         {
             get { return _queryParams; }

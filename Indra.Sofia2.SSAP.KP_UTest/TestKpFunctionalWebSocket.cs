@@ -32,10 +32,20 @@ namespace Indra.Sofia2.SSAP.KP_UTest
     {
         #region Constantes
 
-        private static String SERVICE_URL = "ws://localhost:8080/sib/api_websocket/";
-        private static String TOKEN = "9f7e526e5423436bb9e4ea87afb1573c";
-        private static String KP = "TestKP";
-        private static String KP_INSTANCE = "TestKP:KPTestTemperatura01";
+        // Sofia2
+        private static String SERVICE_URL = "ws://sofia2.com/sib/api_websocket";
+        private static String TOKEN = "49622ff059364fcea6ce78e8b0fa8b4b";
+        private static String KP = "KP_APITesting";
+        private static String KP_INSTANCE = "KP_APITesting:KPTestTemperatura01";
+
+
+        // localhost
+        //private static String SERVICE_URL = "ws://localhost:8080/sib/api_websocket/";
+        //private static String TOKEN = "9f7e526e5423436bb9e4ea87afb1573c";
+        //private static String KP = "TestKP";
+        //private static String KP_INSTANCE = "TestKP:KPTestTemperatura01";
+
+
         private static String ONTOLOGY_NAME = "TestSensorTemperatura";
         private static Int32 CONNECTION_TIMEOUT = 6;
         private static Int32 KEEPALIVE_TIMEOUT = 6;
@@ -47,6 +57,7 @@ namespace Indra.Sofia2.SSAP.KP_UTest
         private static String ONTOLOGY_INSERT_SQLLIKE = "insert into TestSensorTemperatura(geometry, assetId, measure, timestamp) values (\"{ 'coordinates': [ 40.512967, -3.67495 ], 'type': 'Point' }\", \"S_Temperatura_00067\", 15, \"{ '$date': '2014-04-29T08:24:54.005Z'}\")";
         private static String ONTOLOGY_UPDATE_SQLLIKE = "update TestSensorTemperatura set measure = 15 where Sensor.assetId = \"S_Temperatura_00067\"";
         //private static String ONTOLOGY_UPDATE = "{\"_id\":{\"$oid\":\"NO_ID\"},\"Sensor\":{\"geometry\":{\"coordinates\":[40.512967,-3.67495],\"type\":\"Point\"},\"assetId\":\"S_Temperatura_00067\",\"measure\":20,\"timestamp\":{\"$date\":\"2014-04-29T08:24:54.005Z\"}}}";
+        private static String ONTOLOGY_QUERY_SQLLIKE = "select * from TestSensorTemperatura where Sensor.assetId = 'S_Temperatura_00067'";
 
         #endregion Constantes
 
@@ -439,6 +450,20 @@ namespace Indra.Sofia2.SSAP.KP_UTest
             
             Leave(sessionKey);
               
+        }
+
+        [TestMethod]
+        public void TestQusarQuery()
+        {
+            string sessionKey = Join();
+
+            SSAPMessage<SSAPBodyQueryMessageQuasar> request = SSAPMessageGenerator.GetInstance().GenerateQueryMessageQusarSQL(sessionKey, ONTOLOGY_QUERY_SQLLIKE, 0, SSAPQueryResultFormat.JSON, "resultformat");
+
+            SSAPMessage<SSAPBodyReturnMessage> response = client.Send(request);
+
+            Assert.IsTrue(response.Body.IsOk);
+
+            Leave(sessionKey);
         }
 
         #region AUX Listener class for subscription tests
